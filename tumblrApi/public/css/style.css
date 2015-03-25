@@ -1,0 +1,112 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: #eaeaea;
+}
+
+/* Carousel */
+.carousel { height: 100%; }
+.carousel-inner { height: 100%; }
+.carousel-inner>.item { height: 100%; }
+.carousel-inner>.item>img, .carousel-inner>.item>a>img { height: 100%!important; }
+
+.searchInput { position: absolute; z-index: 999; background: transparent; text-align: center; border: none; box-shadow: 0 1px 0 0 black; margin: 10px; height: 30px; line-height: 30px; font-size: 24px; }
+.noPhoto { padding: 50px 0 0 80px; color: #848F9B; }
+
+@-webkit-keyframes spin {
+    0% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 1;
+        background: grey;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        opacity: 0.25;
+    }
+}
+@keyframes spin {
+    0% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 1;
+        background: grey;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        opacity: 0.25;
+    }
+}
+@-webkit-keyframes strange {
+    50% {
+        margin: 0;
+        width: 5em;
+        height: 5em;
+        background: grey;
+    }
+}
+@keyframes strange {
+    50% {
+        margin: 0;
+        width: 5em;
+        height: 5em;
+        background: grey;
+    }
+}
+@-webkit-keyframes toggleO {
+    50% {
+        opacity: 0.5;
+    }
+}
+@keyframes toggleO {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.circle, .inner, .spot {
+    border-radius: 100%;
+    position: relative;
+}
+
+.circle.loader {
+    background: -webkit-linear-gradient(#dddddd, #bbbbbb);
+    background: linear-gradient(#dddddd, #bbbbbb);
+    height: 6em;
+    width: 6em;
+    display: inline-block;
+    margin: 0 auto;
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.loader .inner {
+    padding: 0.2em;
+    background: #fff;
+    height: 4.5em;
+    width: 4.5em;
+}
+
+.loader .spot {
+    margin-top: 1.4em;
+    margin-left: 1.4em;
+    height: 1em;
+    width: 1em;
+    background: #ccc;
+    -webkit-animation: strange 1s linear infinite;
+    animation: strange 1s linear infinite;
+}
+
+.carousel-indicators li {
+    box-shadow: 1px 1px 5px 0;
+}
+
+.carousel-indicators .active {
+    background: #eaeaea;
+}

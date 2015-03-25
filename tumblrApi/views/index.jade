@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  div(ng-view, ng-style='{"height": windowHeight}')
+  script(src='/library/angular.min.js')
+  script(src='/library/ui-bootstrap.js')
+  script(src='/library/ui-bootstrap-tpls.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js')
+  script(src='/javascripts/app.js')

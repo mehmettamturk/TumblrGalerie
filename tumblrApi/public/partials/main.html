@@ -1,0 +1,19 @@
+<input type="text" ng-model="blogUrl" ng-keypress="search($event)" class="searchInput" placeholder="Blog ismini yaziniz.">
+<carousel interval="myInterval" ng-show="photos.length">
+    <slide ng-repeat="photo in photos track by $index" active="photo.active">
+        <img ng-src="{{photo.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+            <!--<h4>Slide {{$index}}</h4>-->
+            <!--<p>{{slide.text}}</p>-->
+        </div>
+    </slide>
+</carousel>
+<div ng-show="!photos.length" class="noPhoto">
+    Blog resim içermiyor.
+</div>
+
+<div class="circle loader" ng-show="showLoader">
+    <div class="inner">
+        <div class="spot"></div>
+    </div>
+</div>
